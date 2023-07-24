@@ -44,25 +44,44 @@ This command creates a new PostgreSQL database named `dynamic_tables_db` with th
 ## Application Setup
 
 1. Ensure you are in the root directory of the project.
-2. Install the required Python packages:
+2. Setup and activate a virtual environment:
 
-```
-pip install -r requirements.txt
-```
+    For Unix or MacOS systems, use the following commands:
 
-3. Run Django migrations:
+    ```
+    python3 -m venv env
+    source env/bin/activate
+    ```
 
-```
-python manage.py migrate
-```
+    For Windows, use the following commands:
 
-4. Start the Django development server:
+    ```
+    py -m venv env
+    env\Scripts\activate
+    ```
 
-```
-python manage.py runserver
-```
+3. Install the required Python packages:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+4. Run Django migrations:
+
+    ```
+    python manage.py migrate
+    ```
+
+5. Start the Django development server:
+
+    ```
+    python manage.py runserver
+    ```
 
 The API should now be available at: `http://localhost:8000`
+
+Do remember to replace "env" with the name of your virtual environment if you have chosen a different name.
+
 
 ## Running Tests
 
